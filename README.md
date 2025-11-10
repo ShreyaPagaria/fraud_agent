@@ -25,5 +25,16 @@ This project demonstrates an **agentic AI pipeline** for fraud detection that in
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure - for easier understanding of the directory
+fraud_agent/
+│
+├── app.py # Streamlit UI entry point
+├── models.py # Model training/loading utilities
+├── preprocess.py # Data loading & preprocessing
+├── eval.py # Metrics & confusion matrix plotting
+├── explainer.py # SHAP + LLM/Ollama explainer
+├── agent.py # Pipeline integration logic
+├── data/ # (optional) dataset folder
+├── models/ # (optional) saved models
+└── requirements.txt # Python dependencies
 
