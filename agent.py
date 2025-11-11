@@ -48,21 +48,6 @@ def run_all(X_test, y_test, models, feature_names, thresholds):
     payload = {"scores": {"xgb": xgb_p, "rf": rf_p, "iso": iso_s, "ae": ae_s}}
     return results, payload
 
-# def explain_transaction(idx, X_test, models, feature_names, payload, llm_client=None):
-#     xgb, rf, iso, ae = models
-#     row = X_test.iloc[[idx]]
-#     xgb_p = xgb.predict_proba(row)[:,1][0]
-#     rf_p  = rf.predict_proba(row)[:,1][0]
-#     iso_s = -iso.decision_function(row)[0]
-#     recon = ae.predict(row, verbose=0)
-#     ae_s  = float(np.mean(np.square(row - recon), axis=1)[0])
-
-#     shap_dict = shap_top_features(xgb, row, feature_names, max_k=5)
-#     proba_dict = {"xgb": float(xgb_p), "rf": float(rf_p)}
-#     anomaly_dict = {"iso": float(iso_s), "ae": float(ae_s)}
-
-#     text = llm_explain_or_fallback(idx, proba_dict, anomaly_dict, shap_dict, row, llm_client)
-#     return text, shap_dict, proba_dict, anomaly_dict
 def explain_transaction(idx, X_test, models, feature_names, payload, llm_client=None):
     xgb, rf, iso, ae = models
 
