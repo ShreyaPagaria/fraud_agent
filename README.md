@@ -9,7 +9,7 @@ An interactive **Streamlit web app** that detects and explains financial fraud u
 This project demonstrates an **agentic AI pipeline** for fraud detection that integrates:
 - **Supervised models:** `XGBoost`, `Random Forest`
 - **Unsupervised models:** `Isolation Forest`, `Autoencoder`
-- **Explainability:** SHAP feature attribution + optional natural-language explanations via **Ollama LLM**
+- **Explainability:** SHAP feature attribution + optional natural-language explanations via **Ollama LLM** [in progress]
 - **UI:** Built with Streamlit for interactive exploration and analysis
 
 ---
